@@ -84,6 +84,31 @@ kind: Service
 metadata:
   labels:
     app: akka-sbr-lease-example
+  annotations:
+    service.alpha.kubernetes.io/tolerate-unready-endpoints: "true"
+  name: "akka-sbr-lease-example-dns-internal"
+spec:
+  ports:
+    - name: management
+      port: 8558
+      protocol: TCP
+      targetPort: 8558
+    - name: remoting
+      port: 2552
+      protocol: TCP
+      targetPort: 2552
+  selector:
+    app: akka-sbr-lease-example
+  clusterIP: None
+  publishNotReadyAddresses: true
+
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: akka-sbr-lease-example
   name: "akka-sbr-lease-example"
 spec:
   ports:
