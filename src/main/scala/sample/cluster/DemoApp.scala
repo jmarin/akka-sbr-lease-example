@@ -1,5 +1,7 @@
 package sample.cluster
 
+import java.net.InetAddress
+
 import akka.actor.{Actor, ActorLogging, ActorSystem, Props}
 import akka.cluster.ClusterEvent.ClusterDomainEvent
 import akka.cluster.{Cluster, ClusterEvent}
@@ -38,7 +40,7 @@ object DemoApp extends App {
         complete(
           HttpEntity(
             ContentTypes.`text/html(UTF-8)`,
-            "<h1>Hello</h1>"
+            s"<h1>Hello from ${InetAddress.getLocalHost.getHostName}</h1>"
           )
         )
       }
