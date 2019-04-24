@@ -3,7 +3,7 @@ import sbt._
 
 object BuildSettings {
 
-  val buildVersion = "1.0-SNAPSHOT"
+  val buildVersion = "1.0.0"
   val buildScalaVersion = "2.12.8"
 
   val commonSettings = Defaults.coreDefaultSettings ++
