@@ -37,3 +37,9 @@ that a node is no longer part of the cluster, thus being removed
 04/25 12:26:19 INFO [akka-sbr-lease-example-akka.actor.default-dispatcher-17] a.c.Cluster(akka://akka-sbr-lease-example) - Cluster Node [akka.tcp://akka-sbr-lease-example@172.17.0.11:2552] - Marking unreachable node [akka.tcp://akka-sbr-lease-example@172.17.0.10:2552] as [Down]
 04/25 12:26:19 INFO [akka-sbr-lease-example-akka.actor.default-dispatcher-3] s.c.ClusterWatcher - Cluster akka.tcp://akka-sbr-lease-example@172.17.0.11:2552 >>> MemberDowned(Member(address = akka.tcp://akka-sbr-lease-example@172.17.0.10:2552, status = Down))
 ```
+
+To see the leases that get created in `Kubernetes`:
+
+```shell
+kubectl get le
+```
