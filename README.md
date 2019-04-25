@@ -38,6 +38,12 @@ that a node is no longer part of the cluster, thus being removed
 04/25 12:26:19 INFO [akka-sbr-lease-example-akka.actor.default-dispatcher-3] s.c.ClusterWatcher - Cluster akka.tcp://akka-sbr-lease-example@172.17.0.11:2552 >>> MemberDowned(Member(address = akka.tcp://akka-sbr-lease-example@172.17.0.10:2552, status = Down))
 ```
 
+Eventually, SBR should release the lease
+
+```
+04/25 13:04:11 INFO [akka-sbr-lease-example-akka.actor.default-dispatcher-2] c.l.a.s.SplitBrainResolver - SBR releasing lease
+```
+
 To see the leases that get created in `Kubernetes`:
 
 ```shell
