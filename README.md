@@ -1,5 +1,7 @@
 # SBR Lease Strategy Sample
 
+This sample project showcases the [Split Brain Resolver Lease Strategy](https://developer.lightbend.com/docs/akka-commercial-addons/current/split-brain-resolver.html)
+
 ## Running
 
 This project is based on the Akka Samples cluster example. To run in a `Kubernetes` environment:
