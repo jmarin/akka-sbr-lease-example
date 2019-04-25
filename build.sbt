@@ -2,7 +2,7 @@ import Dependencies._
 import BuildSettings._
 import com.typesafe.sbt.packager.docker._
 
-enablePlugins(JavaServerAppPackaging, sbtdocker.DockerPlugin, AshScriptPlugin)
+enablePlugins(JavaServerAppPackaging, sbtdocker.DockerPlugin, AshScriptPlugin, Cinnamon)
 
 packageName in Docker := "akka-sbr-lease-example"
 
@@ -28,4 +28,4 @@ javaOptions in Universal ++= Seq(
 
 javaOptions in reStart ++= (javaOptions in run).value
 
-libraryDependencies ++= Seq(akkaSlf4J, logback, akkaDiscovery, akkaPersistence, akkaClusterSharding, akkaManagementCluster, akkaClusterBootstrap, sbr)
+libraryDependencies ++= Seq(akkaSlf4J, logback, akkaDiscovery, akkaPersistence, akkaClusterSharding, akkaManagementCluster, akkaClusterBootstrap, sbr, kubernetesLease)

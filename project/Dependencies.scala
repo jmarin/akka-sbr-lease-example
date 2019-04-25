@@ -12,4 +12,5 @@ object Dependencies {
   lazy val akkaManagementCluster = "com.lightbend.akka.management" %% "akka-management-cluster-http" % Version.akkaManagement
   lazy val akkaDiscovery = "com.typesafe.akka" %% "akka-discovery" % Version.akka
   lazy val sbr = "com.lightbend.akka" %% "akka-split-brain-resolver" % Version.sbr
+  lazy val kubernetesLease = "com.lightbend.akka" %% "akka-lease-kubernetes" % Version.sbr
 }
